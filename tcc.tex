@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Documento modelo para elaboracao do TCC.
+% Adaptado de https://github.com/UnB-CIC/Monografia.
+% Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[tads]{IFG-Formosa}%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pacotes Latex frequentes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%code
+\usepackage{enumitem} 
+\usepackage{mathtools}
+\usepackage{tikz-cd}
+\usepackage{listings}
+\usepackage{pdfpages}% incluir PDFs, usado no apêndice
+%figures
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{color}
+\usepackage{rotating}
+%tables
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{tabularx,ragged2e}
+\usepackage{lscape}
+\usepackage{multirow}
+%bib
+\usepackage[round,sort,authoryear]{natbib}%configuracao de citacoes ABNT
+\usepackage{glossaries}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Informações do Trabalho
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titulo{Modelo para elaboração de TCC no IFG-Formosa}%
+
+\orientador{\prof \dr Nome do(a) Orientador(a)}{IFG/Formosa}%
+\coorientador{\prof \dr Nome do(a) Coo-orientador(a)}{CIC/UnB}%
+\coordenador[a]{\prof[a] \dr[a]  Nome do(a) Coordenador(a)}{IFG/Formosa}%
+\diamesano{31}{Dezembro}{2018}%
+
+\membrobanca{\prof \dr Nome do(a) Avaliador(a)}{IFG/Formosa}%
+\membrobanca{\dr Nome do(a) Avaliador(a)}{CIC/UnB}%
+
+\autor{Nome do}{Autor}%
+
+\palavraschave{palavra01, palavra02 palavra03, palavra04}%
+\keywords{word01, word02, word03, word04}%
+
+\newcommand{\ifg}{\texttt{IFG-Formosa}}%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Texto
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%
+    \capitulo{1_Introducao}{Introdução}%
+    \capitulo{2_Referencial_Teorico}{Referencial Teórico}%
+    \capitulo{3_Metodo}{Método}%
+    \capitulo{4_Resultados}{Resultados}%
+    \capitulo{5_Conclusao}{Conclusão}%
+    \apendice{Apendice_Fichamento}{Fichamento de Artigo Científico}%
+    \anexo{Anexo1}{Histórico de versões}%
+\end{document}%
