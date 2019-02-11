@@ -332,6 +332,7 @@
 		\fi%
 	\fi%
 	\newpage\folhaaprovacao%
+	\newpage\fichacatalografica%
 }
 
 %suporte hyperref para anexos
@@ -703,6 +704,23 @@
 		\defaultspacing%
 	\end{paginatitulo}%
 }
+
+\newcommand\fichacatalografica{%
+	{\thispagestyle{empty}}
+	\vspace*{6.5in}
+	\fbox{
+	\begin{minipage}{\textwidth}
+		\textbf{Ficha Catalográfica}\vfill%
+		\@author\vfill%
+		\hskip 1cm~\@title\vfill%
+		\hskip 1cm~Formosa-GO,~\@ano~-~\pageref{LastPage} p.:A4.\vfill% 	
+		\hskip 1cm~\@sexoorientador: \@nomeorientador\vfill%
+		\hskip 1cm~Trabalho de Conclus\~{a}o de Curso - Instituto Federal de Educa\c{c}\~{a}o, Ci\^{e}ncia e Tecnologia de Goi\'{a}s.~C\^{a}mpus Formosa,~\@ano\vfill%
+		\hskip 1cm~\@palavraschave.~\@keywords.%
+	\end{minipage}
+	}
+}
+
 
 %%
 %% --- Processamento de final e início do documento ---
