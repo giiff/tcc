@@ -2,7 +2,7 @@
 \ProvidesClass{IFG-Formosa}[2018/12/12 notas da classe]
 
 %%
-%% CAPA
+%% DADOS PARA CAPA
 %%
 \def\@universidade{Instituto Federal de Goi\'as}
 \def\@instituto{C\^ampus Formosa}
@@ -321,16 +321,12 @@
 %maketitle para gerar as páginas iniciais
 \def\maketitle{%
 	\if@ForScreenView\relax\else\capa\fi
+	\clearpage%
 	\pretextual\folharosto%
-    \if@posgraduacao%
-		\if@qualificacao%
-		\else%
-			\newpage\thispagestyle{empty}%
-			\begin{picture}(0,0)\put(-90,-747){\includegraphics{doc/BDM.pdf}}\end{picture}%
-			% \includepdf (comando adequado neste caso) precisa ser reconfigurado em modo pretextual, \includegraphics é uma solução rápida, mas ara isso usa valores arbitrários para posicionar a página.
-			\clearpage%
-		\fi%
-	\fi%
+	%Folha em branco
+	\newpage\thispagestyle{empty}\clearpage%
+	% Inserido termo de autorização conforme Art. 13 da resolução 27 do CONSUP/IFG de de 02 de outubro de 2017
+	\newpage\thispagestyle{empty}\begin{picture}(0,0)\put(-80,-800){\includegraphics{doc/redi.pdf}}\end{picture}%
 	\newpage\folhaaprovacao%
 	\newpage\fichacatalografica%
 }
@@ -354,11 +350,19 @@
 %%
 \def\prof{\@ifnextchar[{\@prof@}{\@prof}}
 \def\@prof#1{Prof.\ #1}
-\def\@prof@[#1]#2{Prof.a\ #2}
+\def\@prof@[#1]#2{Prof$^a$.\ #2}
 
 \def\dr{\@ifnextchar[{\@dr@}{\@dr}}
 \def\@dr#1{Dr.\ #1}
-\def\@dr@[#1]#2{Dr.a\ #2}
+\def\@dr@[#1]#2{Dra.\ #2}
+
+\def\me{\@ifnextchar[{\@me@}{\@me}}
+\def\@me#1{Me.\ #1}
+\def\@me@[#1]#2{Ma\ #2}
+
+\def\esp{\@ifnextchar[{\@esp@}{\@esp}}
+\def\@esp#1{Esp.\ #1}
+\def\@esp@[#1]#2{Esp.\ #2}
 
 %%
 
@@ -627,20 +631,20 @@
 			\@logo\vfill%
 			\@printfulltitle\vfill%
 			{\large\@author}\vfill%
-			\@mododeescrita\ %
-			\if@posgraduacao%
-				\if@ppca%
-					apresentado como requisito parcial para %
-					\if@qualificacao{qualificação}\else{conclus\~ao}\fi~do\\%
-				\else%
-					apresentado como requisito parcial para\\
-					\if@qualificacao{qualificação}\else{conclus\~ao}\fi~do %
-				\fi%
-				\@nomecurso\ em \@nomeDoPrograma%
-			\else%
-				apresentado como requisito parcial\\
-				para conclus\~ao do \@nomecurso%
-			\fi%
+			%\@mododeescrita\ %
+			%\if@posgraduacao%
+			%	\if@ppca%
+			%		apresentado como requisito parcial para %
+			%		\if@qualificacao{qualificação}\else{conclus\~ao}\fi~do\\%
+			%	\else%
+			%		apresentado como requisito parcial para\\
+			%		\if@qualificacao{qualificação}\else{conclus\~ao}\fi~do %
+			%	\fi%
+			%	\@nomecurso\ em \@nomeDoPrograma%
+			%\else%
+			%	apresentado como requisito parcial\\
+			%	para conclus\~ao do \@nomecurso%
+			%\fi%
 			\vfill%
 			\@sexoorientador\\\@nomeorientador\\%
 			\if@coorientador
